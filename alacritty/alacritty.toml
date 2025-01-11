@@ -11,6 +11,8 @@
 #
 # import = ["<string>",]
 #
+import = ["./catppuccin-mocha.toml"]
+#
 # Import additional configuration files.
 # Imports are loaded in order, skipping all missing files, with the importing file being loaded last. If a field is already present in a previous import, it will be replaced.
 # All imports must either be absolute paths starting with /, or paths relative to the user's home directory starting with ~/.
@@ -50,10 +52,11 @@
 # Default: "None"
 #
 # Example:
-#
-# [shell]
-# program = "/bin/zsh"
-# args = ["-l"]
+
+working_directory = "C:/Users/Edoardo"
+#[shell]
+#program = "/bin/powershell"
+#args = ["--cd ~"]
 #
 # [shell]
 # program = "/usr/bin/zsh"
@@ -67,7 +70,8 @@
 # [env]
 # WINIT_X11_SCALE_FACTOR = "1.0"
 #
-# [env]
+[env]
+TERM = "xterm-256color"
 #
 #
 # WINDOW
@@ -232,11 +236,11 @@ padding = { x = 15, y = 15 }
 # Default: true
 #
 [font]
-normal = { family = "FiraMono", style = "Regular" }
-bold = { family = "FiraMono", style = "Bold" }
-italic = { family = "FiraMono", style = "Italic" }
-bold_italic = { family = "FiraMono", style = "Medium" }
 size = 12
+normal  = { family = "FiraCode Nerd Font Mono", style = "Regular" }
+bold = { family = "FiraCode Nerd Font Mono", style = "Bold" }
+bold_italic = { family = "FiraCode Nerd Font Mono", style = "Bold Italic" }
+italic = { family = "FiraCode Nerd Font Mono", style = "Italic" }
 # builtin_box_drawing = true 
 #
 # COLORS
@@ -245,45 +249,45 @@ size = 12
 #
 # colors primary
 # This section documents the [colors.primary] table of the configuration file.
-[colors.primary]
-background = '#191724'
-foreground = '#e0def4'
-
-[colors.cursor]
-text = '#e0def4'
-cursor = '#524f67'
-
-[colors.vi_mode_cursor]
-text = '#e0def4'
-cursor = '#524f67'
-
-[colors.selection]
-text = '#e0def4'
-background = '#403d52'
-
-[colors.normal]
-black = '#26233a'
-red = '#eb6f92'
-green = '#31748f'
-yellow = '#f6c177'
-blue = '#9ccfd8'
-magenta = '#c4a7e7'
-cyan = '#ebbcba'
-white = '#e0def4'
-
-[colors.bright]
-black = '#6e6a86'
-red = '#eb6f92'
-green = '#31748f'
-yellow = '#f6c177'
-blue = '#9ccfd8'
-magenta = '#c4a7e7'
-cyan = '#ebbcba'
-white = '#e0def4'
-
-[colors.hints]
-start = {foreground = '#908caa', background = '#1f1d2e' }
-end = { foreground = '#6e6a86', background = '#1f1d2e' }
+# [colors.primary]
+# background = '#191724'
+# foreground = '#e0def4'
+#
+# [colors.cursor]
+# text = '#e0def4'
+# cursor = '#524f67'
+#
+# [colors.vi_mode_cursor]
+# text = '#e0def4'
+# cursor = '#524f67'
+#
+# [colors.selection]
+# text = '#e0def4'
+# background = '#403d52'
+#
+# [colors.normal]
+# black = '#26233a'
+# red = '#eb6f92'
+# green = '#31748f'
+# yellow = '#f6c177'
+# blue = '#9ccfd8'
+# magenta = '#c4a7e7'
+# cyan = '#ebbcba'
+# white = '#e0def4'
+#
+# [colors.bright]
+# black = '#6e6a86'
+# red = '#eb6f92'
+# green = '#31748f'
+# yellow = '#f6c177'
+# blue = '#9ccfd8'
+# magenta = '#c4a7e7'
+# cyan = '#ebbcba'
+# white = '#e0def4'
+#
+# [colors.hints]
+# start = {foreground = '#908caa', background = '#1f1d2e' }
+# end = { foreground = '#6e6a86', background = '#1f1d2e' }
 # [colors]
 # foreground = "#d8d8d8"
 # background = "#181818"
