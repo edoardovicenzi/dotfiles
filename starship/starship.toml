@@ -1,0 +1,124 @@
+# Use custom format
+format = "[$username@$hostname:$directory\\$](blue) $git_branch$git_status "
+
+# Wait 10 milliseconds for starship to check files under the current directory.
+scan_timeout = 10
+
+# Disable the blank line at the start of the prompt
+add_newline = false
+
+palette = "catppuccin_mocha"
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
+
+# shell config
+
+[username]
+style_user = "blue"
+style_root = "red"
+format = "[$user]($style)"
+show_always = true
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style)"
+style = "green"
+disabled = false
+
+[directory]
+style = "lavender"
+format = '~'
+truncation_length = 4
+truncate_to_repo = false
+
+[character]
+success_symbol = "[[󰄛](green) ❯](peach)"
+error_symbol = "[[󰄛](red) ❯](peach)"
+vimcmd_symbol = "[󰄛 ❮](subtext1)" # For use with zsh-vi-mode
+
+[shell]
+fish_indicator = '󰈺 '
+powershell_indicator = '_'
+bash_indicator = 'sh'
+zsh_indicator = 'zsh'
+unknown_indicator = 'mystery shell'
+style = 'cyan'
+disabled = false
+
+[time]
+disabled = false
+format = '🕙 [\[ $time \]]($style) '
+time_format = '%T'
+utc_time_offset = '-5'
+time_range = '10:00:00-14:00:00'
+
+
+# Git config
+
+[git_branch]
+style = "mauve"
+symbol = '🌱 '
+truncation_length = 4
+truncation_symbol = ''
+ignore_branches = ['master', 'main']
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = '🔖 '
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = '[🍒 PICKING](bold red)'
+
+[git_status]
+conflicted = '🏳'
+ahead = '🏎💨 ${count}'
+behind = '😰 ${count}'
+diverged = '😵 ${ahead_count}⇣${behind_count}'
+up_to_date = '✓'
+untracked = '🤷'
+stashed = '📦'
+modified = '📝'
+staged = '[++\($count\)](green)'
+renamed = '👅'
+deleted = '🗑'
+
+
+# Language specific config
+
+[nodejs]
+format = 'via [🤖 $version](green) '
+
+[dotnet]
+symbol = '🥅 '
+style = 'green'
+heuristic = false
+
+[rust]
+format = 'via [⚙️ $version](red)'
