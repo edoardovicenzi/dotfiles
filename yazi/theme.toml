@@ -5,7 +5,8 @@
 # : Flavor {{{
 
 [flavor]
-use = "kanagawa"
+dark = "catppuccin-mocha"
+light = "catppuccin-mocha"
 
 # : }}}
 
