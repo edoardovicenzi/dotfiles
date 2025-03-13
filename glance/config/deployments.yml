@@ -1,0 +1,69 @@
+- name: Deployments
+  columns:
+    - size: small
+      widgets:
+
+    - size: full
+      widgets:
+        - type: group
+          widgets:
+          - type: monitor
+            cache: 1m
+            title: VDesign
+            sites:
+              - title: Homepage
+                url: https://edoardovicenzi.github.io/VDesign/
+                icon: assets/vdesign.png
+
+          - type: monitor
+            cache: 1m
+            title: Github Pages
+            sites:
+              - title: The counter
+                url: https://edoardovicenzi.github.io/s2i-the-counter/
+                icon: di:javascript
+              - title: Booklify
+                url: https://edoardovicenzi.github.io/s2i-booklify/
+                icon: di:javascript
+              - title: Homepage
+                url: https://edoardovicenzi.github.io/VDesign/
+                icon: assets/vdesign.png
+
+          - type: monitor
+            cache: 1m
+            title: Repos
+            sites:
+              - title: VDesign
+                url: https://github.com/edoardovicenzi/VDesign/
+                icon: assets/vdesign.png
+              - title: The counter
+                url: https://github.com/edoardovicenzi/s2i-the-counter
+                icon: di:javascript
+              - title: Booklify
+                url: https://github.com/edoardovicenzi/s2i-booklify
+                icon: di:javascript
+              - title: Moove
+                url: https://github.com/edoardovicenzi/s2i-moove
+                icon: di:typescript
+              - title: Kreas
+                url: https://github.com/edoardovicenzi/s2i-kreas
+                icon: di:php
+              - title: Meditactive
+                url: https://github.com/edoardovicenzi/s2i-meditactive
+                icon: di:javascript
+              - title: Pooling Around
+                url: https://github.com/edoardovicenzi/s2i-pooling-around
+                icon: di:java
+              - title: UAW Round Maker
+                url: https://github.com/edoardovicenzi/uaw-round-maker
+                icon: di:javascript
+              - title: IBabbi
+                url: https://github.com/edoardovicenzi/ibabbi
+                icon: di:javascript
+              - title: VDesign
+                url: https://github.com/edoardovicenzi/VDesign
+                icon: di:javascript
+            
+
+    - size: small
+      widgets:

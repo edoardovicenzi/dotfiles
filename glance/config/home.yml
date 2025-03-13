@@ -1,0 +1,87 @@
+- name: Home
+  # Optionally, if you only have a single page you can hide the desktop navigation for a cleaner look
+  # hide-desktop-navigation: true
+  columns:
+    - size: small
+      widgets:
+        - type: calendar
+          first-day-of-week: monday
+
+        - type: twitch-channels
+          channels:
+            - dariomocciatwitch
+            - marcuskron
+            - joov
+            - matarakan
+            - la_vica_
+            - poly
+
+    - size: full
+      widgets:
+        - type: videos
+          style: grid-cards
+          collapse-after-rows: 3
+          channels:
+            - UCHnyfMqiRRG1u-2MsSQLbXA # Veritasium
+            - UCXl1telOZAWnDtjL-sc9lvQ # ariodb
+            - UC0e3QhIYukixgh5VVpKHH9Q # Code Bullet
+            - UCwjz7_xH_1Sehw5W-qIDLeg # Four Keys Books
+            - UCTLFQqQUyPayUSI0kHIH1Hg # Four Keys Workshop
+            - UCmEzz-dPBVrsy4ZluSsYHDg # Hyperplexed
+            - UC40Qux6JMAHiP34q6jja9Wg # Joov
+            - UCsXVk37bltHxD1rDPwtNM8Q # Kurzgesagt – In a Nutshell
+            - UC6107grRI4m0o2-emgoDnAA # Smarter Evryday
+            - UCTAfm-YD2M9xzvbYvRc5ttA # Timothy Cain
+            - UCCFD2I_EBPlwpeaZfX3egWw # Storia e Mitologia Illustrate
+
+        - type: group
+          widgets:
+            - type: reddit
+              subreddit: ProgrammerHumor
+              show-thumbnails: true
+            - type: reddit
+              subreddit: Nicegirls
+              show-thumbnails: true
+            - type: reddit
+              subreddit: unixporn
+              show-thumbnails: true
+            - type: reddit
+              subreddit: DarioMocciaTwitch
+              show-thumbnails: true
+
+    - size: small
+      widgets:
+        - type: weather
+          location: Trento, Italy
+          units: metric # alternatively "imperial"
+          hour-format: 24h # alternatively "24h"
+          # Optionally hide the location from being displayed in the widget
+          # hide-location: true
+        - type: rss
+          limit: 10
+          collapse-after: 5
+          cache: 12h
+          feeds:
+            - url: https://www.geopop.it/feed
+              title: Geopop
+            - url: https://www.archlinux.org/feed/news
+              title: Archlinux
+            - url: https://distrowatch.com/news/dw.xml
+              title: Distrowatch
+
+
+        - type: markets
+          # The link to go to when clicking on the symbol in the UI,
+          # {SYMBOL} will be substituded with the symbol for each market
+          symbol-link-template: https://www.tradingview.com/symbols/{SYMBOL}/news
+          markets:
+            - symbol: SPY
+              name: S&P 500
+            - symbol: BTC-USD
+              name: Bitcoin
+            - symbol: NVDA
+              name: NVIDIA
+            - symbol: AAPL
+              name: Apple
+            - symbol: MSFT
+              name: Microsoft
